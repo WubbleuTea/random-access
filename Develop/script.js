@@ -19,7 +19,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
- 
+
+
+
   // random number
   
   //prompt user for # of characters
@@ -38,12 +40,6 @@ var charactorNumber = function() {
     charactorNumber();
   }
 }
-
-var upperCase = getRandomNumber(65, 90)
-function getRandomNumber(min, max) { // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-console.log("This is a character " + String.fromCharCode(upperCase));
 
 
 var confirmLower = false;
@@ -82,30 +78,34 @@ function fourTypes(windowConfirms) {
     }
     console.log("The answer to special is " + confirmSpecial)
 }
-// prompt user for 4 different criteria
-var characterTypes = [lowercase, uppercase, numeric, special]
+// // prompt user for 4 different criteria
+// var characterTypes = [lowercase, uppercase, numeric, special]
 
-//random generate lowercase
-var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var getLower = alpha[Math.floor(Math.random() * alpha.length) + 1];
+// //random generate lowercase
+// var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// var getLower = alpha[Math.floor(Math.random() * alpha.length) + 1];
 
 
 
-      //String.fromCharCode(97+Math.floor(Math.random() * 26))
+//       //String.fromCharCode(97+Math.floor(Math.random() * 26))
 
-//random generate uppercase
+// //random generate uppercase/lowercase
 var upperCase = getRandomNumber(65, 90)
+var lowerCase = getRandomNumber(97, 122)
 function getRandomNumber(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-console.log(String.fromCharCode("This is a character " + upperCase));
-
+console.log("This is a character " + String.fromCharCode(upperCase));
+console.log("This is a character " + String.fromCharCode(lowerCase));
 
 // random generate numeral
-for (var i = 0; i < 9; i++) {
-  var random = Math.floor(Math.random() * 9);
-  console.log(random);
-}; 
+function randomNumeral() {
+  for (var i = 0; i < 9; i++) {
+    var random = Math.floor(Math.random() * 9);
+    return ("Your random numeral is " + random)
+  }; 
+};
+console.log(randomNumeral())
 
 //random generate special character
 function randomSpecialChar () {
