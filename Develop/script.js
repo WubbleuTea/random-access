@@ -30,6 +30,8 @@ var generateBtn = document.querySelector("#generate");
     //Confirmation of different 
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
     
     function generatePassword() {
       var passwordTemp = ""
@@ -68,21 +70,19 @@ var generateBtn = document.querySelector("#generate");
       }
     
       console.log(passwordTemp, passwordTemp.length, total, charactersNeeded.passwordLength); 
+
       lastChar();
-    
-      function lastChar() {        
+          function lastChar() {        
         while (passwordTemp.length < charactersNeeded.passwordLength) {
             var index = Math.floor(Math.random()*total.length)
             passwordTemp = passwordTemp + total[index]
             console.log("Your password with the new letter is " + passwordTemp + " and your current password length is " + passwordTemp.length)
         };
+        console.log("Your final temp password is " + passwordTemp)
+        return passwordTemp;
       };
-      console.log(passwordTemp)
-      passwordTemp = password;
-    
+      return lastChar();
     };
-    return password;
-    
   };
 
 // Add event listener to generate button
