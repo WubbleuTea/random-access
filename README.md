@@ -13,7 +13,7 @@ CSS
 
 ## Screenshot of Application
 
-![Image of working password generator](/random-access.png)
+![Image of working password generator](random-access.png)
 
 ## Contributers
 Joshua Weisbrod-Torres
