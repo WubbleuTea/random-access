@@ -1,4 +1,4 @@
-# Ranndom Access Password Generator
+# Random Access Password Generator
 
 ## Purpose
 A website to create randomly generated passwords using particular criteria.
